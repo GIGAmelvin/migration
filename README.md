@@ -94,3 +94,5 @@ exports['migration']:Migrate({
 })
 
 ```
+
+Note: the lua table passed to `Migrate` is effectively an "array" of these condition + query pairs. All conditions must be satisfied in order for the queries to run. If conditions are met, then all queries will run.
