@@ -83,14 +83,14 @@ After that, we can adjust our call to `migration:Migrate` to provide a table wit
 `server.lua`:
 ```lua
 exports['migration']:Migrate({
-		{
-			conditions = {
-				LoadResourceFile('foo', 'sql/check-for-column.sql'),
-			},
-			queries = {
-				LoadResourceFile('foo', 'sql/add-column.sql'),
-			},
-		},
-	})
+  {
+    conditions = {
+      LoadResourceFile('foo', 'sql/check-for-column.sql'),
+    },
+    queries = {
+      LoadResourceFile('foo', 'sql/add-column.sql'),
+    },
+  },
+})
 
 ```
