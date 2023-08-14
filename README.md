@@ -56,6 +56,7 @@ The Lua table passed to the `Migrate` function can be more advanced. For example
 - Create a SQL file that will perform the change if the condition is met (column is not present), like `resources/foo/sql/add-column.sql`.
 
 The condition would depend on exactly what you're trying to do, but in this example we're adding a column. This query will return a single row containing `column_name`: `foo_bar` if the migration has already been made.
+
 `check-for-column.sql`:
 ```sql
 SELECT
